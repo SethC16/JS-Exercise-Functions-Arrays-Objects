@@ -39,10 +39,15 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+    return {
+      id: id,
+      name: name,
+      email: email
+    };
 }
-
+console.log(makePersonObject(16, 'Seth', 'Sethcox16@yahoo.com'));
 /**
  * ### Challenge `getName`
  * 
@@ -56,9 +61,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(name) {
   /* code here */
+  return 'hello, my name is ' + name;
 }
+console.log(getName('Seth'));
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -73,8 +80,9 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
   /* code here */
+
 }
 
 
@@ -136,8 +144,11 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
-}
+   /* code here */
+  
+  
+  // console.log(getCarInfoByIndex(module.exports, 0));
+
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -150,8 +161,9 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(inventory) {
   /* code here */
+
 }
 
 /**
@@ -270,7 +282,7 @@ function carMaker(/* code here */) {
 /// ////// END OF CHALLENGE /////////
 if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detected
-  // For Node/Non-browser test env
+  // For Node/Non-browser test env1
   module.exports = module.exports || {}
   if (addNumbers) { module.exports.addNumbers = addNumbers }
   if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
